@@ -4,5 +4,5 @@
   encoding.codec = "ndjson"
   compression = "gzip"
   uri = "https://api.uptrace.dev/api/v1/vector-logs"
-  headers.uptrace-dsn = "https://${UPTRACE_API_KEY}@api.uptrace.dev/${UPTRACE_PROJECT}"
+  headers.uptrace-dsn = "${UPTRACE_PROJECT_DSN}"
 

@@ -1,5 +1,15 @@
-app = "fly-log-shipper-example"
+# fly.toml file generated for paypack-logs on 2022-02-24T13:07:43+02:00
+
+app = "paypack-logs"
+
+[env]
+ORG="paypack"
+SUBJECT="logs.>"
+UPTRACE_PROJECT_DSN="https://Xyj8XDYxsfUIl-HFNMJv3A@uptrace.dev/115"
+
+# [build]
+# image="flyio/log-shipper:latest"
 
 [metrics]
-  port = 9598
   path = "/metrics"
+  port = 9598
