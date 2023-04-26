@@ -1,15 +1,18 @@
-# fly.toml file generated for paypack-logs on 2022-02-24T13:07:43+02:00
+# fly.toml app configuration file generated for paypack-logs on 2023-04-26T18:16:10+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "paypack-logs"
+primary_region = "lhr"
+kill_signal = "SIGINT"
+kill_timeout = 5
 
 [env]
-ORG="paypack"
-SUBJECT="logs.>"
-UPTRACE_PROJECT_DSN="https://Xyj8XDYxsfUIl-HFNMJv3A@uptrace.dev/115"
-
-# [build]
-# image="flyio/log-shipper:latest"
+  ORG = "paypack"
+  SUBJECT = "logs.>"
+  UPTRACE_PROJECT_DSN = "https://Xyj8XDYxsfUIl-HFNMJv3A@uptrace.dev/115"
 
 [metrics]
-  path = "/metrics"
   port = 9598
+  path = "/metrics"
